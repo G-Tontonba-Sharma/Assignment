@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer review page</title>
+</head>
+<body>
+    <header>
+        <h1>TATA Company</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#review">Review</a> 
+        </nav>
+    </header>
+    <hr>
+
+    <!--Reviewed section-->
+    <section>
+        <article>
+            <p>Name: Martin</p>
+            <p>Rating: 4</p>
+            <p>Comment: The car is amazing and I loved it.</p>
+        </article>
+        <hr>
+        <article>
+            <p>Name: Josep</p>
+            <p>Rating: 3</p>
+            <p>Comment:The interior is so luxurious and well-crafted</p>
+        </article>
+        <hr>
+        <article>
+            <p>Name: Taylor</p>
+            <p>Rating: 5</p>
+            <p>Comment:This car drives so smoothly, and the handling feels amazing.</p>
+        </article>
+    </section>
+    <hr>
+
+    <!--Reviewing section-->
+    <section id="review">
+        <form action="#">
+            <label for="name">Name</label>
+            <input type="text v" name="name" required>
+
+            <label for="comment">Comment</label>
+            <input type="comment" name="comment" required>
+
+            <section>
+                <p>Please rate our website from 1 to 5.</p>
+                <label for="rating"><input type="radio" name="1" value="1">1</label>
+                <label for="rating"><input type="radio" name="1" value="2">2</label>
+                <label for="rating"><input type="radio" name="1" value="3">3</label>
+                <label for="rating"><input type="radio" name="1" value="4">4</label>
+                <label for="rating"><input type="radio" name="1" value="5">5</label>
+            </section>
+
+            <button>Submit</button>
+        </form>
+    </section>
+</body>
+</html>

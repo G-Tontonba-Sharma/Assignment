@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Quiz</title>
+</head>
+<body>
+
+  <h1>Simple Quiz</h1>
+
+  <form id="quizForm" onsubmit="return checkAnswers()">
+    <div class="question">
+      <h3>1. What is the capital of France?</h3>
+      <label><input type="radio" name="q1" value="a"> Berlin</label><br>
+      <label><input type="radio" name="q1" value="b"> Madrid</label><br>
+      <label><input type="radio" name="q1" value="c"> Paris</label><br>
+      <label><input type="radio" name="q4" value="d"> china</label><br>
+    </div>
+
+    <div class="question">
+      <h3>2. What is 5 × 3?</h3>
+      <label><input type="radio" name="q2" value="a"> 8</label><br>
+      <label><input type="radio" name="q2" value="b"> 15</label><br>
+      <label><input type="radio" name="q2" value="c"> 10</label><br>
+    </div>
+
+    <div class="question">
+      <h3>3. Which planet is known as the Red Planet?</h3>
+      <label><input type="radio" name="q3" value="a"> Venus</label><br>
+      <label><input type="radio" name="q3" value="b"> Mars</label><br>
+      <label><input type="radio" name="q3" value="c"> Jupiter</label><br>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="thankyou">
+    <h2>Thank You!</h2>
+    <p id="resultText"></p>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      let score = 0;
+
+      const answers = {
+        q1: 'c',
+        q2: 'b',
+        q3: 'b'
+      };
+
+      const form = document.forms['quizForm'];
+
+      for (let q in answers) {
+        const selected = form[q].value;
+        if (selected === answers[q]) {
+          score++;
+        }
+      }
+
+      alert("Your score is: " + score + "/3");
+
+      document.getElementById("quizForm").style.display = "none";
+      document.getElementById("thankyou").style.display = "block";
+      document.getElementById("resultText").textContent = "You scored " + score + " out of 3.";
+
+      return false;
+    }
+  </script>
+
+</body>
+</html>
